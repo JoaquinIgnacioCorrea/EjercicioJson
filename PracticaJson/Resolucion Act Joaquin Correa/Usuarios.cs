@@ -15,12 +15,12 @@ namespace PracticaJson.Resolucion_Act_Joaquin_Correa
         [JsonPropertyName("notificaciones_usuario")]
         public bool NotificacionesUsuario { get; set; }
 
-        public string MostrarAmigos()
+        public StringBuilder MostrarAmigos()
         {
-            string ListaAmigos = "";
+            StringBuilder ListaAmigos = new StringBuilder();
             foreach (var amigos in AmigosUsuario)
             {
-                ListaAmigos += amigos+" ";
+                ListaAmigos.Append(amigos + " ");
             }
             return ListaAmigos;
         }
